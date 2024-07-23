@@ -7,15 +7,11 @@
     @apply h-full;
   }
 
-  html,body {
+  html, body {
     @apply h-full;
-
     @apply select-none;
-
     @apply bg-transparent;
-
     @apply font-mono antialiased text-white;
-
-    @apply overflow-hidden
+    @apply overflow-hidden;
   }
 }

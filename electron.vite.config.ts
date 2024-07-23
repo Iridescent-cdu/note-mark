@@ -17,7 +17,7 @@ export default defineConfig({
     plugins: [externalizeDepsPlugin()]
   },
   renderer: {
-    assetsInclude: 'src/renderer/src/assets/**',
+    // assetsInclude: 'src/renderer/src/assets/**', //希望 Vite 处理 src/renderer/src/assets 目录下的所有文件
     resolve: {
       alias: {
         '@renderer': resolve('src/renderer/src'),
