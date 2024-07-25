@@ -3,8 +3,8 @@ import { RootLayout, Sidebar, Content } from './components/AppLayout'
 function App(): JSX.Element {
   return (
     <RootLayout>
-      <Sidebar className="p-2 border-4 border-red-500"></Sidebar>
-      <Content className="border-4 border-blue-500"></Content>
+      <Sidebar className="p-2"></Sidebar>
+      <Content className="border-1 bg-zinc-900/50 border-l-white/20"></Content>
     </RootLayout>
   )
 }
