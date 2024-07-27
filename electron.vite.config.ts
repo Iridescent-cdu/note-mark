@@ -7,9 +7,9 @@ export default defineConfig({
     plugins: [externalizeDepsPlugin()],
     resolve: {
       alias: {
-        '@main': resolve('src/main/src'),
-        '@shared': resolve('src/shared'),
-        '@lib': resolve('src/main/lib')
+        '@/main': resolve('src/main/src'),
+        '@/shared': resolve('src/shared'),
+        '@/lib': resolve('src/main/lib')
       }
     }
   },
@@ -20,12 +20,12 @@ export default defineConfig({
     // assetsInclude: 'src/renderer/src/assets/**', //希望 Vite 处理 src/renderer/src/assets 目录下的所有文件
     resolve: {
       alias: {
-        '@renderer': resolve('src/renderer/src'),
-        '@shared': resolve('src/shared'),
+        '@/renderer': resolve('src/renderer/src'),
+        '@/shared': resolve('src/shared'),
         '@/hooks': resolve('src/renderer/src/hooks'),
-        '@assets': resolve('src/renderer/src/assets'),
+        '@/assets': resolve('src/renderer/src/assets'),
         '@/store': resolve('src/renderer/src/store'),
-        '@/components': resolve('src/renderer/src/comporents'),
+        '@/components': resolve('src/renderer/src/components'),
         '@/mocks': resolve('src/renderer/src/mocks')
       }
     },
