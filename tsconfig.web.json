@@ -13,10 +13,10 @@
     "noUnusedLocals": false,
     "baseUrl": ".",
     "paths": {
-      "@renderer/*": [
+      "@/renderer/*": [
         "src/renderer/src/*"
       ],
-      "@shared/*": [
+      "@/shared/*": [
         "src/shared/*"
       ],
       "@/*": [

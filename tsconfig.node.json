@@ -13,10 +13,10 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@main/*": [
+      "@/main/*": [
         "src/main/*"
       ],
-      "@shared/*": [
+      "@/shared/*": [
         "src/shared/*"
       ],
       "@/*": [
