@@ -11,7 +11,7 @@ export const selectedNoteAtom = atom((get) => {
 
   const selectedNoteIndex = get(selectedNoteIndexAtom)
 
-  if (!selectedNoteIndex) return null
+  if (selectedNoteIndex == null) return null
 
   const selectedNote = notes[selectedNoteIndex]
 
