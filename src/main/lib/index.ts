@@ -1,6 +1,6 @@
 import { appDirectoryName, fileEncoding } from '@/shared/constants'
 import { NoteInfo } from '@/shared/models'
-import { GetNotes } from '@/shared/type'
+import { GetNotes } from '@/shared/types'
 import { ensureDir, readdir, stat } from 'fs-extra'
 import { homedir } from 'os'
 
