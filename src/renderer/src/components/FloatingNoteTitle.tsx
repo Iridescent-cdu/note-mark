@@ -5,6 +5,7 @@ import { selectedNoteAtom } from '../store'
 
 export const FloatingNoteTitle = ({ className, ...props }: ComponentProps<'div'>) => {
   const selectedNote = useAtomValue(selectedNoteAtom)
+
   if (!selectedNote) return null
 
   return (

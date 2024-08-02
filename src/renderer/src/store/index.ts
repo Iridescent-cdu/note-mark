@@ -1,6 +1,7 @@
 import { NoteInfo } from '@/shared/models'
 import { atom } from 'jotai'
 import { unwrap } from 'jotai/utils'
+import isEmpty from 'lodash/isEmpty'
 
 const loadNotes = async () => {
   const notes = await window.context.getNotes()
@@ -20,7 +21,7 @@ export const selectedNoteAtom = atom((get) => {
 
   const selectedNoteIndex = get(selectedNoteIndexAtom)
 
-  if (selectedNoteIndex == null || !notes) return null
+  if (selectedNoteIndex == null || !notes || isEmpty(notes)) return null
 
   const selectedNote = notes[selectedNoteIndex]
 
