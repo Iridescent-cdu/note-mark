@@ -1,9 +1,9 @@
-import { app, shell, BrowserWindow, ipcMain } from 'electron'
+import { GetNotes, ReadNote } from '@/shared/types'
+import { electronApp, is, optimizer } from '@electron-toolkit/utils'
+import { app, BrowserWindow, ipcMain, shell } from 'electron'
 import { join } from 'path'
-import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import { getNotes, readNote } from './lib'
-import { GetNotes, ReadNote } from '@/shared/types'
 
 function createWindow(): void {
   // Create the browser window.
