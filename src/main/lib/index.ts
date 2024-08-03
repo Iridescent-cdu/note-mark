@@ -10,6 +10,7 @@ export const getRootDir = () => {
 
 export const getNotes: GetNotes = async () => {
   const rootDir = getRootDir()
+
   await ensureDir(rootDir)
 
   const notesFileNames = await readdir(rootDir, {
@@ -23,7 +24,9 @@ export const getNotes: GetNotes = async () => {
 }
 
 export const getNoteInfoFromFileName = async (fileName: string): Promise<NoteInfo> => {
-  const fileStats = await stat(`${getRootDir()}/${fileName}`)
+  const rootDir = getRootDir()
+
+  const fileStats = await stat(`${rootDir}/${fileName}`)
 
   return {
     title: fileName.replace(/\.md$/, ''),
@@ -32,10 +35,15 @@ export const getNoteInfoFromFileName = async (fileName: string): Promise<NoteInf
 }
 
 export const readNote: ReadNote = async (fileName) => {
-  return await readFile(`${getRootDir()}/${fileName}.md`, fileEncoding)
+  const rootDir = getRootDir()
+
+  return await readFile(`${rootDir}/${fileName}.md`, fileEncoding)
 }
 
 export const writeNote: WriteNote = async (fileName, content) => {
-  await ensureDir(getRootDir())
-  await writeFile(`${getRootDir()}/${fileName}.md`, content, fileEncoding)
+  const rootDir = getRootDir()
+
+  await ensureDir(rootDir)
+
+  await writeFile(`${rootDir}/${fileName}.md`, content, fileEncoding)
 }
